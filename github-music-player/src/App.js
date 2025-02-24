@@ -47,7 +47,6 @@ const MusicPlayer = () => {
 
   return (
     <div style={{ marginTop: "20px", padding: "20px", fontFamily: "Arial", maxWidth: "600px", margin: "auto", textAlign: "center", backgroundColor: "#f8f9fa", borderRadius: "10px", boxShadow: "0px 4px 6px rgba(0,0,0,0.1)" }}>
-      <h2 style={{ color: "#007bff" }}>My Songs</h2>
       <ul style={{ listStyleType: "none", padding: 0 }}>
         {songs.map((song, index) => (
           <li key={song.name} style={{ marginBottom: "10px", padding: "10px", backgroundColor: "#ffffff", borderRadius: "5px", boxShadow: "0px 2px 4px rgba(0,0,0,0.1)" }}>
@@ -68,6 +67,7 @@ const MusicPlayer = () => {
             Your browser does not support the audio element.
           </audio>
           <div style={{ marginTop: "10px" }}>
+            Playing: {formatSongName(songs[currentIndex]?.name)}
             <button onClick={prevSong} style={{ margin: "5px", padding: "5px 15px", backgroundColor: "#28a745", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}>
               <FaStepBackward />
             </button>
