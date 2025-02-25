@@ -63,7 +63,8 @@ const MusicPlayer = () => {
 
   useEffect(() => {
     if (currentIndex >= 0 && currentPlaylist != null) {
-      const url = `${window.location.origin}?playlist=${currentPlaylist}&song=${playlists[currentPlaylist][currentIndex]?.name}`;
+      console.log(window.location)
+      const url = `${window.location.origin}${window.location.pathname}?playlist=${currentPlaylist}&song=${playlists[currentPlaylist][currentIndex]?.name}`;
       window.history.replaceState(null, playlists[currentPlaylist][currentIndex]?.name, url)  
     }
   }, [currentIndex, currentPlaylist, playlists])
