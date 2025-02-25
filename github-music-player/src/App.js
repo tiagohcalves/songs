@@ -115,6 +115,7 @@ const MusicPlayer = () => {
       <div style={{ marginTop: "20px", textAlign: "center" }}>
         <h3 style={{ color: "#007bff" }}>Check my Spotify!</h3>
         <iframe 
+          title="Spotify Player"
           src="https://open.spotify.com/embed/artist/5xfp9phqz9IEuAnHDASQwl?utm_source=generator&theme=0"
           width="100%" 
           height="352" 
