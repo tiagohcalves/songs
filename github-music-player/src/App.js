@@ -18,7 +18,7 @@ const MusicPlayer = () => {
 
   useEffect(() => {
     // Fetch the list of directories (playlists) from the GitHub repository
-    fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/?ref=${BRANCH}`)
+    fetch(`https://api.github.com/repos/${GITHUB_REPO}/songs/contents/?ref=${BRANCH}`)
       .then((response) => response.json())
       .then((data) => {
         const directories = data.filter((item) => item.type === "dir");
